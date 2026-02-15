@@ -3697,7 +3697,6 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/cybert/proprietary/vendor/etc/hal_uuid_map_ns.xml:$(TARGET_COPY_OUT_VENDOR)/etc/hal_uuid_map_ns.xml \
     vendor/motorola/cybert/proprietary/vendor/etc/hdrcfg.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/hdrcfg.cfg \
     vendor/motorola/cybert/proprietary/vendor/etc/init.insmod.mt6897.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/init.insmod.mt6897.cfg \
-    vendor/motorola/cybert/proprietary/vendor/etc/init/android.hardware.biometrics.face-service.face.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.biometrics.face-service.face.rc \
     vendor/motorola/cybert/proprietary/vendor/etc/init/android.hardware.biometrics.fingerprint-service-goodix2.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.biometrics.fingerprint-service-goodix2.rc \
     vendor/motorola/cybert/proprietary/vendor/etc/init/android.hardware.biometrics.fingerprint-service-rbs2.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.biometrics.fingerprint-service-rbs2.rc \
     vendor/motorola/cybert/proprietary/vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc \
@@ -3745,6 +3744,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/cybert/proprietary/vendor/etc/init/mtk_agpsd_p.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/mtk_agpsd_p.rc \
     vendor/motorola/cybert/proprietary/vendor/etc/init/mtk_gnss.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/mtk_gnss.rc \
     vendor/motorola/cybert/proprietary/vendor/etc/init/mtk_lbs_service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/mtk_lbs_service.rc \
+    vendor/motorola/cybert/proprietary/vendor/etc/init/mtkpower_applist-mtk-default.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/mtkpower_applist-mtk-default.rc \
     vendor/motorola/cybert/proprietary/vendor/etc/init/mtkrild.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/mtkrild.rc \
     vendor/motorola/cybert/proprietary/vendor/etc/init/muxreport.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/muxreport.rc \
     vendor/motorola/cybert/proprietary/vendor/etc/init/nvram_daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/nvram_daemon.rc \
@@ -3756,6 +3756,8 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/cybert/proprietary/vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.media.c2@1.0-service.rc \
     vendor/motorola/cybert/proprietary/vendor/etc/init/vendor.mediatek.hardware.mmagent-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.mmagent-service.rc \
     vendor/motorola/cybert/proprietary/vendor/etc/init/vendor.mediatek.hardware.mmlpq@V1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.mmlpq@V1-service.rc \
+    vendor/motorola/cybert/proprietary/vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-init.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.mtkpower@1.0-init.rc \
+    vendor/motorola/cybert/proprietary/vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.mtkpower@1.0-service.rc \
     vendor/motorola/cybert/proprietary/vendor/etc/init/vendor.mediatek.hardware.nvram-sevice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.nvram-sevice.rc \
     vendor/motorola/cybert/proprietary/vendor/etc/init/vendor.mediatek.hardware.nwk_opt@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.nwk_opt@1.0-service.rc \
     vendor/motorola/cybert/proprietary/vendor/etc/init/vendor.mediatek.hardware.pq_aidl-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.pq_aidl-service.rc \
@@ -3962,6 +3964,7 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.camera.isphal_aidl@1.0-impl \
     vendor.mediatek.hardware.gnss-impl \
     vendor.mediatek.hardware.gnss.batching-impl \
+    vendor.mediatek.hardware.mtkpower-aidl-impl \
     vendor.mediatek.hardware.nvram-impl \
     vendor.mediatek.hardware.videotelephony-impl \
     vibrator.default \
@@ -3983,6 +3986,7 @@ PRODUCT_PACKAGES += \
     libTEECommon \
     libVkLayer_mtk_rt_sdk \
     lib_iir \
+    lib_power_applist \
     libaaa_aaautil \
     libaaa_afassist_V2 \
     libaaa_afassistctrl \
@@ -4217,6 +4221,8 @@ PRODUCT_PACKAGES += \
     liboemcrypto \
     libpixelflinger \
     libpkip \
+    libpower_timer \
+    libpowerhal \
     libpowerhalwrap_vendor \
     libpqframework \
     libpqhdrmetaparser \
@@ -4656,15 +4662,25 @@ PRODUCT_PACKAGES += \
     nfc_nci.st21nfc.st \
     nwk_opt_imp \
     sensors.moto \
+    libaudiopreprocessing \
+    libaudiopreprocessing_mtk \
+    libbundlewrapper \
     libdlbvol \
+    libdownmix \
+    libdynproc \
+    libeffectproxy \
+    libldnhncr \
+    libreverbwrapper \
     libswdap \
     libswgamedap \
     libswspatializer \
+    libvisualizer \
     vendor.aac.hardware.richtap.vibrator-V1-ndk \
     vendor.awinic.hardware.tiktap.vibrator-V1-ndk \
     vendor.dolby.dms-V1-ndk \
     vendor.dolby.hardware.dms@2.0 \
     vendor.dolby.hardware.dms@2.1 \
+    vendor.mediatek.framework.mtksf_ext-V2-ndk \
     vendor.mediatek.hardware.apmonitor-V1-ndk \
     vendor.mediatek.hardware.apmonitor@2.0 \
     vendor.mediatek.hardware.apuware.apusys-V3-ndk \
@@ -4771,6 +4787,9 @@ PRODUCT_PACKAGES += \
     EuiccGoogle \
     MobileFeliCaClient \
     MtkTelephonyAssist \
+    mediatek-framework \
+    mediatek-ims-base \
+    mtk-moto-ims-ext \
     mtk-moto-telephony-ext \
     mtk-telephony-common \
     android.hardware.gatekeeper-service.trustonic.xml \
@@ -4785,7 +4804,6 @@ PRODUCT_PACKAGES += \
     com.motorola.hardware.display.panel-service.xml \
     com.motorola.hardware.display.touch.xml \
     dms-service.xml \
-    face-default_3.xml \
     gnss-mtk-default.xml \
     gnss-mtk.xml \
     manifest_IMoto_AIDL_Fingerprint.xml \
@@ -4806,6 +4824,8 @@ PRODUCT_PACKAGES += \
     motorola.hardware.wireless.wlc.xml \
     mtk_lbs_service.xml \
     mtkgnss-batching.xml \
+    mtkpower_applist-mtk-default.xml \
+    power-mediatek.xml \
     sarwifi-default.xml \
     thermal-mediatek.xml \
     vendor.zuialarm.hardware.alarm.xml \
@@ -4820,7 +4840,6 @@ PRODUCT_PACKAGES += \
     charge_only_mode \
     conninfra_loader \
     hardware_revisions \
-    android.hardware.biometrics.face-service.face-isv \
     android.hardware.biometrics.fingerprint-service-rbs \
     android.hardware.biometrics.fingerprint-service.goodix \
     android.hardware.bluetooth@1.1-service-mediatek \
@@ -4858,6 +4877,8 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.gnss-service \
     vendor.mediatek.hardware.mmagent-service \
     vendor.mediatek.hardware.mmlpq@V1-service \
+    vendor.mediatek.hardware.mtkpower-service.mediatek \
+    vendor.mediatek.hardware.mtkpower_applist-service.mediatek \
     vendor.mediatek.hardware.nvram-service \
     vendor.mediatek.hardware.nwk_opt@1.0-service \
     vendor.mediatek.hardware.pq_aidl-service \
@@ -5371,5 +5392,4 @@ PRODUCT_PACKAGES += \
     vendor_lib64_mtk000_mipi_raw_tuning_so
 
 PRODUCT_BOOT_JARS += \
-    mtk-moto-telephony-ext \
     mtk-telephony-common

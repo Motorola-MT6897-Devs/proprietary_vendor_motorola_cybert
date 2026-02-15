@@ -1863,6 +1863,38 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.mtkpower-aidl-impl",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/hw/vendor.mediatek.hardware.mtkpower-aidl-impl.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libhardware",
+                "libhidlbase",
+                "libutils",
+                "libcutils",
+                "libbinder_ndk",
+                "vendor.mediatek.hardware.mtkpower-V1-ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    relative_install_path: "hw",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.mediatek.hardware.nvram-impl",
     owner: "motorola",
     strip: {
@@ -2404,6 +2436,40 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libcutils",
                 "libutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "lib_power_applist",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/lib_power_applist.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libui",
+                "libutils",
+                "liblog",
+                "libexpat",
+                "libtinyxml2",
+                "libhidlbase",
+                "libhardware",
+                "libpowerhal",
+                "vendor.mediatek.hardware.mtkpower@1.2",
                 "libc++",
                 "libc",
                 "libm",
@@ -9264,6 +9330,80 @@ cc_prebuilt_library_shared {
                 "libkmsetkey",
                 "liboemcrypto",
                 "libDxHdcp",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libpower_timer",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libpower_timer.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libpowerhal",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libpowerhal.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libui",
+                "libutils",
+                "liblog",
+                "libexpat",
+                "libtinyxml2",
+                "libhidlbase",
+                "libhardware",
+                "vendor.mediatek.hardware.netdagent@1.0",
+                "vendor.mediatek.hardware.netdagent-V1-ndk",
+                "vendor.mediatek.hardware.bluetooth.audio@2.1",
+                "vendor.mediatek.hardware.bluetooth.audio@2.2",
+                "vendor.mediatek.hardware.mtkpower@1.0",
+                "vendor.mediatek.hardware.mtkpower@1.1",
+                "vendor.mediatek.hardware.mtkpower@1.2",
+                "libpower_timer",
+                "libged",
+                "libfmq",
+                "libbase",
+                "libbinder_ndk",
+                "libbinder",
+                "vendor.mediatek.framework.mtksf_ext-V2-ndk",
+                "android.hardware.bluetooth.audio-V3-ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -24332,6 +24472,88 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libaudiopreprocessing",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/soundfx/libaudiopreprocessing.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    relative_install_path: "soundfx",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libaudiopreprocessing_mtk",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/soundfx/libaudiopreprocessing_mtk.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    relative_install_path: "soundfx",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libbundlewrapper",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/soundfx/libbundlewrapper.so",
+            ],
+            shared_libs: [
+                "libaudioutils",
+                "libcutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    relative_install_path: "soundfx",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libdlbvol",
     owner: "motorola",
     strip: {
@@ -24349,6 +24571,147 @@ cc_prebuilt_library_shared {
                 "libaudioutils",
                 "libstagefright_foundation",
                 "libdlbpreg",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    relative_install_path: "soundfx",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdownmix",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/soundfx/libdownmix.so",
+            ],
+            shared_libs: [
+                "libaudioutils",
+                "libcutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    relative_install_path: "soundfx",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdynproc",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/soundfx/libdynproc.so",
+            ],
+            shared_libs: [
+                "libaudioutils",
+                "libbase",
+                "liblog",
+                "libutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    relative_install_path: "soundfx",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libeffectproxy",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/soundfx/libeffectproxy.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libutils",
+                "libeffects",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    relative_install_path: "soundfx",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libldnhncr",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/soundfx/libldnhncr.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    relative_install_path: "soundfx",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libreverbwrapper",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/soundfx/libreverbwrapper.so",
+            ],
+            shared_libs: [
+                "libaudioutils",
+                "libcutils",
+                "liblog",
                 "libc++",
                 "libc",
                 "libm",
@@ -24449,6 +24812,32 @@ cc_prebuilt_library_shared {
                 "libstagefright_foundation",
                 "libdlbpreg",
                 "libdmshal",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    relative_install_path: "soundfx",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libvisualizer",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/soundfx/libvisualizer.so",
+            ],
+            shared_libs: [
+                "liblog",
                 "libc++",
                 "libc",
                 "libm",
@@ -24582,6 +24971,31 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libutils",
                 "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.framework.mtksf_ext-V2-ndk",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.mediatek.framework.mtksf_ext-V2-ndk.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -27510,6 +27924,33 @@ android_app_import {
 }
 
 dex_import {
+    name: "mediatek-framework",
+    owner: "motorola",
+    jars: [
+        "proprietary/system_ext/framework/mediatek-framework.jar",
+    ],
+    system_ext_specific: true,
+}
+
+dex_import {
+    name: "mediatek-ims-base",
+    owner: "motorola",
+    jars: [
+        "proprietary/system_ext/framework/mediatek-ims-base.jar",
+    ],
+    system_ext_specific: true,
+}
+
+dex_import {
+    name: "mtk-moto-ims-ext",
+    owner: "motorola",
+    jars: [
+        "proprietary/system_ext/framework/mtk-moto-ims-ext.jar",
+    ],
+    system_ext_specific: true,
+}
+
+dex_import {
     name: "mtk-moto-telephony-ext",
     owner: "motorola",
     jars: [
@@ -27630,15 +28071,6 @@ prebuilt_etc_xml {
     name: "dms-service.xml",
     owner: "motorola",
     src: "proprietary/vendor/etc/vintf/manifest/dms-service.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
-
-prebuilt_etc_xml {
-    name: "face-default_3.xml",
-    owner: "motorola",
-    src: "proprietary/vendor/etc/vintf/manifest/face-default_3.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,
@@ -27819,6 +28251,24 @@ prebuilt_etc_xml {
     name: "mtkgnss-batching.xml",
     owner: "motorola",
     src: "proprietary/vendor/etc/vintf/manifest/mtkgnss-batching.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "mtkpower_applist-mtk-default.xml",
+    owner: "motorola",
+    src: "proprietary/vendor/etc/vintf/manifest/mtkpower_applist-mtk-default.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "power-mediatek.xml",
+    owner: "motorola",
+    src: "proprietary/vendor/etc/vintf/manifest/power-mediatek.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,
@@ -28123,46 +28573,6 @@ sh_binary {
     owner: "motorola",
     src: "proprietary/vendor/bin/hardware_revisions.sh",
     filename: "hardware_revisions.sh",
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "android.hardware.biometrics.face-service.face-isv",
-    owner: "motorola",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/android.hardware.biometrics.face-service.face-isv",
-            ],
-            shared_libs: [
-                "libbase",
-                "libbinder_ndk",
-                "libcutils",
-                "libhidlbase",
-                "libutils",
-                "liblog",
-                "libui",
-                "libcamera2ndk_vendor",
-                "libmediandk",
-                "libnativewindow",
-                "libcrypto",
-                "android.hardware.biometrics.face-V3-ndk",
-                "android.hardware.biometrics.common-V3-ndk",
-                "android.hardware.keymaster-V4-ndk",
-                "libjsoncpp",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
     soc_specific: true,
 }
 
@@ -29432,6 +29842,76 @@ cc_prebuilt_binary {
             ],
             shared_libs: [
                 "libmmlpqImpl",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    relative_install_path: "hw",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "vendor.mediatek.hardware.mtkpower-service.mediatek",
+    owner: "motorola",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/hw/vendor.mediatek.hardware.mtkpower-service.mediatek",
+            ],
+            shared_libs: [
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libhardware",
+                "libhidlbase",
+                "libhardware_legacy",
+                "vendor.mediatek.hardware.mtkpower-V1-ndk",
+                "vendor.mediatek.hardware.mtkpower-aidl-impl",
+                "android.hardware.power-service-mediatek.cybert",
+                "libbase",
+                "libbinder_ndk",
+                "android.hardware.power-V4-ndk",
+                "libpower_timer",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    relative_install_path: "hw",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "vendor.mediatek.hardware.mtkpower_applist-service.mediatek",
+    owner: "motorola",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/hw/vendor.mediatek.hardware.mtkpower_applist-service.mediatek",
+            ],
+            shared_libs: [
+                "libbase",
+                "libutils",
+                "liblog",
+                "libbinder_ndk",
+                "libhardware",
+                "libhardware_legacy",
+                "vendor.mediatek.hardware.mtkpower_applist-V1-ndk",
                 "libc++",
                 "libc",
                 "libm",
