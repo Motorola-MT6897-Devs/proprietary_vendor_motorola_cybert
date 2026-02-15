@@ -4663,18 +4663,10 @@ PRODUCT_PACKAGES += \
     nwk_opt_imp \
     sensors.moto \
     libaudiopreprocessing \
-    libaudiopreprocessing_mtk \
-    libbundlewrapper \
     libdlbvol \
-    libdownmix \
-    libdynproc \
-    libeffectproxy \
-    libldnhncr \
-    libreverbwrapper \
     libswdap \
     libswgamedap \
     libswspatializer \
-    libvisualizer \
     vendor.aac.hardware.richtap.vibrator-V1-ndk \
     vendor.awinic.hardware.tiktap.vibrator-V1-ndk \
     vendor.dolby.dms-V1-ndk \
