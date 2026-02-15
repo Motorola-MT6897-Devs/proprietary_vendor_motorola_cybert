@@ -4787,11 +4787,11 @@ PRODUCT_PACKAGES += \
     EuiccGoogle \
     MobileFeliCaClient \
     MtkTelephonyAssist \
+    mtk-telephony-common \
     mediatek-framework \
     mediatek-ims-base \
     mtk-moto-ims-ext \
     mtk-moto-telephony-ext \
-    mtk-telephony-common \
     android.hardware.gatekeeper-service.trustonic.xml \
     android.hardware.neuralnetworks-shim-service-mtk.xml \
     android.hardware.security.keymint-service.trustonic.xml \

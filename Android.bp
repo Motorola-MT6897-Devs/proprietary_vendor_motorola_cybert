@@ -27924,6 +27924,14 @@ android_app_import {
 }
 
 dex_import {
+    name: "mtk-telephony-common",
+    owner: "motorola",
+    jars: [
+        "proprietary/system/framework/mtk-telephony-common.jar",
+    ],
+}
+
+dex_import {
     name: "mediatek-framework",
     owner: "motorola",
     jars: [
@@ -27955,15 +27963,6 @@ dex_import {
     owner: "motorola",
     jars: [
         "proprietary/system_ext/framework/mtk-moto-telephony-ext.jar",
-    ],
-    system_ext_specific: true,
-}
-
-dex_import {
-    name: "mtk-telephony-common",
-    owner: "motorola",
-    jars: [
-        "proprietary/system_ext/framework/mtk-telephony-common.jar",
     ],
     system_ext_specific: true,
 }
