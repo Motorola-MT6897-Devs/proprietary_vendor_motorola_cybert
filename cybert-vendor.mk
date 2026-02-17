@@ -3695,6 +3695,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/cybert/proprietary/vendor/etc/hal_uuid_map_dns.xml:$(TARGET_COPY_OUT_VENDOR)/etc/hal_uuid_map_dns.xml \
     vendor/motorola/cybert/proprietary/vendor/etc/hal_uuid_map_dnsf.xml:$(TARGET_COPY_OUT_VENDOR)/etc/hal_uuid_map_dnsf.xml \
     vendor/motorola/cybert/proprietary/vendor/etc/hal_uuid_map_ns.xml:$(TARGET_COPY_OUT_VENDOR)/etc/hal_uuid_map_ns.xml \
+    vendor/motorola/cybert/proprietary/vendor/etc/hal_uuid_map_nsf.xml:$(TARGET_COPY_OUT_VENDOR)/etc/hal_uuid_map_nsf.xml \
     vendor/motorola/cybert/proprietary/vendor/etc/hdrcfg.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/hdrcfg.cfg \
     vendor/motorola/cybert/proprietary/vendor/etc/init.insmod.mt6897.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/init.insmod.mt6897.cfg \
     vendor/motorola/cybert/proprietary/vendor/etc/init/android.hardware.biometrics.fingerprint-service-goodix2.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.biometrics.fingerprint-service-goodix2.rc \
@@ -3708,6 +3709,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/cybert/proprietary/vendor/etc/init/android.hardware.neuralnetworks-shim-service-mtk.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.neuralnetworks-shim-service-mtk.rc \
     vendor/motorola/cybert/proprietary/vendor/etc/init/android.hardware.secure_element@1.2-service-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.secure_element@1.2-service-mediatek.rc \
     vendor/motorola/cybert/proprietary/vendor/etc/init/android.hardware.secure_element_gto.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.secure_element_gto.rc \
+    vendor/motorola/cybert/proprietary/vendor/etc/init/android.hardware.security.keymint-service.strongbox-thales.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.security.keymint-service.strongbox-thales.rc \
     vendor/motorola/cybert/proprietary/vendor/etc/init/android.hardware.security.keymint@3.0-service.trustonic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.security.keymint@3.0-service.trustonic.rc \
     vendor/motorola/cybert/proprietary/vendor/etc/init/android.hardware.tetheroffload-V1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.tetheroffload-V1-service.rc \
     vendor/motorola/cybert/proprietary/vendor/etc/init/android.hardware.usb-aidl-service.mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.usb-aidl-service.mediatek.rc \
@@ -3768,6 +3770,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/cybert/proprietary/vendor/etc/init/volte_clientapi_ua.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/volte_clientapi_ua.rc \
     vendor/motorola/cybert/proprietary/vendor/etc/init/volte_rcs_ua.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/volte_rcs_ua.rc \
     vendor/motorola/cybert/proprietary/vendor/etc/init/wlan_assistant.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wlan_assistant.rc \
+    vendor/motorola/cybert/proprietary/vendor/etc/keymint3_thales_multiscript_02_15.xml:$(TARGET_COPY_OUT_VENDOR)/etc/keymint3_thales_multiscript_02_15.xml \
     vendor/motorola/cybert/proprietary/vendor/etc/libnfc-hal-st-felica.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-hal-st-felica.conf \
     vendor/motorola/cybert/proprietary/vendor/etc/libnfc-hal-st.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-hal-st.conf \
     vendor/motorola/cybert/proprietary/vendor/etc/libnfc-nci-st-felica.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci-st-felica.conf \
@@ -4118,6 +4121,8 @@ PRODUCT_PACKAGES += \
     libion_ulit \
     libipsec_ims_shr \
     libiqi_bridge \
+    libjc_keymint-thales \
+    libjc_keymint_transport-thales \
     libjc_weaver_transport \
     libjpeg-alpha-oal_vendor \
     libjpeg-alpha_vendor \
@@ -4274,6 +4279,7 @@ PRODUCT_PACKAGES += \
     libmockdrmcryptoplugin \
     motorola.hardware.camera.imgtuner.aidl-V1-ndk \
     motorola.hardware.fdr-V1-ndk \
+    motorola.hardware.health.aidl-V1-ndk \
     motorola.hardware.input@1.0 \
     motorola.hardware.input@1.1 \
     motorola.hardware.sarwifi-V1-ndk \
@@ -4843,6 +4849,7 @@ PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks-shim-service-mtk \
     android.hardware.secure_element-service.thales \
     android.hardware.secure_element@1.2-service-mediatek \
+    android.hardware.security.keymint-service.strongbox-thales \
     android.hardware.security.keymint@3.0-service.trustonic \
     android.hardware.thermal-service.mediatek.cybert \
     android.hardware.usb-aidl-service.mediatekv1.0 \
@@ -4853,6 +4860,7 @@ PRODUCT_PACKAGES += \
     com.motorola.hardware.display.touch-service \
     motorola.hardware.camera.imgtuner.aidl-service \
     motorola.hardware.fdr-service \
+    motorola.hardware.health-service \
     motorola.hardware.input@1.1-service \
     motorola.hardware.sarwifi-srv \
     motorola.hardware.sensorext-service \
@@ -4890,6 +4898,7 @@ PRODUCT_PACKAGES += \
     mcDriverDaemon \
     mnld \
     mot_tcmd \
+    moto_eSE_tool \
     motobox \
     mt6660_calibration \
     jpegtool \
